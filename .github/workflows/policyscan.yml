@@ -32,9 +32,9 @@ jobs:
           path: project.zip # Wildcards can be used to filter the files copied into the container. See: https://github.com/actions/upload-artifact
       - uses: veracode/veracode-uploadandscan-action@master # Run the uploadandscan action. Inputs are described above.
         with:
-          appname: 'veracode-archer'
+          appname: '${{ github.event.repository.name }}'
           filepath: 'project.zip'
           vid: '${{ secrets.VERACODE_API_ID }}'
           vkey: '${{ secrets.VERACODE_API_KEY }}'
           scantimeout: 15
-          createprofile: false
+          createprofile: true
