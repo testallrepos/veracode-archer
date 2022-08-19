@@ -6,7 +6,7 @@ Uses the Veracode Archer API to to export data from the Veracode Platform for im
 
 Clone this repository:
 
-    git clone https://github.com/tjarrettveracode/veracode-archer
+    git clone https://github.com/veracode/veracode-archer
 
 Install dependencies:
 
@@ -40,10 +40,10 @@ Arguments supported include:
 
 ## Output
 
-The script outputs an XML file that validates to the Veracode [archerreport.xsd schema](https://help.veracode.com/viewer/document/Dq8nUbznNM4qXZ~bC0Zi9A).
+The script outputs an XML file that validates to the Veracode [archerreport.xsd schema](https://docs.veracode.com/r/juWk3S4IpxRp~wtVbHDe2A/root).
 
 ## Notes
 
-1. To be able to use the Archer API, you must have an API service account with the Archer Report API role, as described in the [Veracode Help Center](https://help.veracode.com/reader/TNIuE0856bMwmOQldtxbmQ/VCmovHKq7wSDn5AAjxt3nw)
+1. To be able to use the Archer API, you must have an API service account with the Archer Report API role, as described in the [Veracode Docs](https://docs.veracode.com/r/0LNPZSWsET5w7F4GQsTM_A/root)
 2. Generation of the output file in the Veracode Platform may take some time. The script will run until the file is received.
 3. The longer the period (and the more applications included), the longer it takes to generate the Archer Report on the Veracode side. If your report generation takes a very long time, try shortening the period or focusing only on certain scan types.
